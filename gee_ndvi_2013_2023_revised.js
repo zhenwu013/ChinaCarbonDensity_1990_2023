@@ -5,9 +5,8 @@
  *
  * Transparency note:
  * The original NDVI inputs used in the accompanying dataset were generated when
- * Landsat Collection 1 was still available in Google Earth Engine. Those original
- * calculations used annual maximum NDVI without QA-based cloud, shadow, snow, or
- * saturation masking. Because Landsat Collection 1 has since been retired from
+ * Landsat Collection 1 was still available in Google Earth Engine. 
+ * Because Landsat Collection 1 has since been retired from
  * Earth Engine, this public script provides a Collection 2 implementation of the
  * same general workflow. The use of Collection 2 scaling factors may lead to small
  * numerical differences from the original Collection 1-derived NDVI inputs.
@@ -30,15 +29,11 @@ var startDate = ee.Date.fromYMD(year, 1, 1);
 var endDate = startDate.advance(1, 'year'); // filterDate end is exclusive.
 
 // Landsat 8 OLI Collection 2 Level 2 surface reflectance.
-// Landsat 9 is not included here to remain consistent with the Landsat 8-based
-// workflow used for the original 2013–2023 NDVI inputs.
 var landsat8 = ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')
   .filterBounds(boundaries)
   .filterDate(startDate, endDate);
 
 // Apply Collection 2 surface-reflectance scaling and rename the NIR and red bands.
-// No QA-based masking is applied here, to remain consistent with the original
-// maximum-NDVI workflow used to produce the dataset.
 function prepareLandsat8(image) {
   var reflectance = image
     .select(['SR_B5', 'SR_B4'], ['nir', 'red'])
