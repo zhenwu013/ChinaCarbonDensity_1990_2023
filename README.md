@@ -32,7 +32,7 @@ Change regionNameField if the boundary data use a different attribute name. Each
 
 The boundary dataset is not included in this repository. Users should provide their own boundary data or use the boundary file released with the accompanying dataset, if available.
 
-## Landsat Collection 1 and Collection 2 Note
+Landsat Collection 1 and Collection 2 Note
 
 The original NDVI inputs used for the carbon-density dataset were generated when Landsat Collection 1 was still available in Google Earth Engine. The original workflow calculated annual maximum NDVI from Landsat surface reflectance imagery.
 
@@ -44,7 +44,7 @@ The annual maximum NDVI workflow is otherwise kept as close as possible to the o
 
 These scripts are provided for transparency and approximate reproducibility under the current Earth Engine data catalogue.
 
-## Annual NDVI Workflow
+Annual NDVI Workflow
 
 The NDVI scripts generate export tasks for one year at a time. The tasks must be started manually in the Earth Engine Code Editor.
 
