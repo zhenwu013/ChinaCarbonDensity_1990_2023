@@ -2,7 +2,7 @@
 
 This repository contains Google Earth Engine (GEE) scripts for preparing annual Normalized Difference Vegetation Index (NDVI), elevation, and slope inputs used in the study “A 1-km annual dataset of vegetation and soil carbon density across China's terrestrial ecosystems from 1990 to 2023.”
 
-The NDVI script documents the historical Landsat data sources used in the study. Landsat 5 Collection 1 was used in 2022 to generate NDVI for 1990–2012, while Landsat 8 Collection 2 was used for 2013–2023. Landsat Collection 1 has since been retired from Google Earth Engine and is no longer directly accessible through its original collection ID. Users may select alternative available data sources, but doing so may produce different NDVI results.
+The NDVI script documents the historical Landsat data sources used in the study. Landsat 5 Collection 1 was used in 2022 to generate NDVI for 1990–2012, Landsat 8 Collection 2 was used for 2013–2022, and Landsat 9 Collection 2 was used for 2023. Landsat Collection 1 has since been retired from Google Earth Engine and is no longer directly accessible through its original collection ID. Users may select alternative available data sources, but doing so may produce different NDVI results.
 
 ## Scripts
 
@@ -29,7 +29,6 @@ The NDVI script generates export tasks for one year at a time. The tasks must be
 6. Check the Console for the number of Landsat scenes and the region names.
 7. Open the **Tasks** tab and click **Run** for each generated export task.
 8. Repeat these steps for each required year.
-
 
 ## SRTM Elevation and Slope Workflow
 
