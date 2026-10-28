@@ -15,10 +15,7 @@ The NDVI script documents the historical Landsat data sources used in the study.
 - A study-region boundary dataset uploaded to Google Earth Engine Assets.
 - Google Drive access for exporting GeoTIFF files.
 
-<CodeBlock language="markdown" editable>
 The scripts refer to `users/zhenwu013/SixRegion1`, a China boundary dataset uploaded to the author's GEE Assets. The `Field` attribute contains subregion identification codes. Users should replace `boundaryAsset` with their own accessible boundary asset and modify `regionNameField` if their boundary data use a different attribute name.
-</CodeBlock>
-
 
 ## Annual NDVI Workflow
 
