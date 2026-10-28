@@ -23,10 +23,10 @@ The NDVI script generates export tasks for one year at a time. The tasks must be
 
 1. Open `NDVI_1990_2023.js` in the Earth Engine Code Editor.
 2. Replace `boundaryAsset` with the path to the study-region boundary.
-3. Change `regionNameField` if the region-name attribute is not `Field`.
-4. Set year, collectionId, redBand, and nirBand according to the required year and Landsat collection, as indicated in the script.
+3. Change `regionNameField` if the subregion ID attribute is not `Field`.
+4. Set `year`, `collectionId`, `redBand`, and `nirBand` according to the required year and Landsat collection, as indicated in the script.
 5. Click **Run** in the Earth Engine Code Editor.
-6. Check the Console for the number of Landsat scenes and the region names.
+6. Check the Console for the number of Landsat scenes and the generated export tasks.
 7. Open the **Tasks** tab and click **Run** for each generated export task.
 8. Repeat these steps for each required year.
 
@@ -34,7 +34,7 @@ The NDVI script generates export tasks for one year at a time. The tasks must be
 
 1. Open `DEM_Slope.js` in the Earth Engine Code Editor.
 2. Replace `boundaryAsset` with the path to the study-region boundary.
-3. Change `regionNameField` if the region-name attribute is not `Field`.
+3. Change `regionNameField` if the subregion ID attribute is not `Field`.
 4. Click **Run**.
 5. Open the **Tasks** tab and manually start the elevation and slope export tasks for every study region.
 
